@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="row">
+        <div class="row">
+            <h3 class="header" style="font-size:18px;">Name for Price List                        
+            </h3>           
+            <hr />
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label col-md-4">name</label>
+                        @*@Html.LabelFor(model => model.CustomerCode, htmlAttributes: new { @class = "control-label col-md-4" })*@
+                        <div class="col-md-8">
+                            <input type="text" id="PriceListName" name="PriceListName" class="form-control" />                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4 text-center">
+                    <input type="button" id="btnPriceListNSave" value="Save" class="mybtn" />
+                </div>
+            </div>
+            <div id="priceListName">                
+            </div>
+        </div>
+        <div class="row" id="divEmblem" style="display:none">
+            <h3>Emblems for Price List:</h3>
+              <div class="row">
+                  <div class="col-md-3">
+                      <span>Value</span>
+                  </div>
+                  <div class="col-md-5">
+                      <input type="text" id="EmblemValue" name="EmblemValue" />
+                  </div>
+                  <div class="col-md-4">
+                      <input type="button" id="btnEmblemAdd" value="Add" />
+                  </div>
+              </div>
+              <div class="row">
+                    <table id="tblEmblem">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Value
+                                </th>
+                                <th>
+                                    Action
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+
+              </div>
+            <div class="row">
+                <input type="button" id="btnEmblemSave" value="Save" />
+            </div>
+        </div>
+
+         <div class="row" id="divList" style="display:none">
+        </div>
+
+        <input type="hidden" id="PriceListID" />
+
+    </div>
+
+

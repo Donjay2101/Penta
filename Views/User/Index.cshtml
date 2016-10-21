@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<div class="row form-group">
+    <div class="col-md-12">
+        <a href="/User/Create" data-toggle="tooltip" data-placement="right" title="Create new"><img src="~/images/add.png" class="create" /></a>
+    </div>
+</div>
+
+<div class="row form-group"> 
+    <div class="col-md-12">
+        <span id="pendingUsers" class="activeTab" style="cursor:pointer">Pending Users</span>|<span class="normalTab" id="activeUsers" style="cursor:pointer">Active Users</span>
+    </div>   
+</div>
+
+<div id="dataContainer">
+     @Html.Action("User")
+</div>
+

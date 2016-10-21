@@ -1,0 +1,1394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="RonPentaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'RonPenta.dbo.Emblem Order Information' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Emblem Order Information">
+          <Key>
+            <PropertyRef Name="Customer ID" />
+            <PropertyRef Name="Rush Order Yes" />
+            <PropertyRef Name="Rush Order No" />
+            <PropertyRef Name="Ship Via Red" />
+            <PropertyRef Name="Ship Via Blue" />
+            <PropertyRef Name="Ship Via Orange" />
+            <PropertyRef Name="Ship Via Ground" />
+            <PropertyRef Name="Ship Via Other" />
+            <PropertyRef Name="Pre-pro sample yes" />
+            <PropertyRef Name="pre-pro sample no" />
+            <PropertyRef Name="First Order Yes" />
+            <PropertyRef Name="First Order No" />
+            <PropertyRef Name="Shape circle" />
+            <PropertyRef Name="Shape square" />
+            <PropertyRef Name="Shape rect" />
+            <PropertyRef Name="Shape Other" />
+            <PropertyRef Name="merrow" />
+            <PropertyRef Name="hand cut" />
+            <PropertyRef Name="other" />
+            <PropertyRef Name="backing plain" />
+            <PropertyRef Name="backing heatseal" />
+            <PropertyRef Name="backing plastic" />
+            <PropertyRef Name="backing other" />
+            <PropertyRef Name="special thread neon" />
+            <PropertyRef Name="special thread metallic" />
+            <PropertyRef Name="Duplicate Sample" />
+            <PropertyRef Name="As Sample" />
+            <PropertyRef Name="Reorder Exactly" />
+            <PropertyRef Name="Reorder Change" />
+          </Key>
+          <Property Name="Customer ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Contact Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Company" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address1" Type="nvarchar" MaxLength="50" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="State" Type="nvarchar" MaxLength="50" />
+          <Property Name="Zip" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fax/other phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Customer code" Type="nvarchar" MaxLength="50" />
+          <Property Name="Terms Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="PO Number" Type="nvarchar" MaxLength="50" />
+          <Property Name="Oder Date" Type="nvarchar" MaxLength="50" />
+          <Property Name="Request Date" Type="nvarchar" MaxLength="50" />
+          <Property Name="Rush Order Yes" Type="bit" Nullable="false" />
+          <Property Name="Rush Order No" Type="bit" Nullable="false" />
+          <Property Name="Ship Via Red" Type="bit" Nullable="false" />
+          <Property Name="Ship Via Blue" Type="bit" Nullable="false" />
+          <Property Name="Ship Via Orange" Type="bit" Nullable="false" />
+          <Property Name="Ship Via Ground" Type="bit" Nullable="false" />
+          <Property Name="Ship Via Other" Type="bit" Nullable="false" />
+          <Property Name="Pre-pro sample yes" Type="bit" Nullable="false" />
+          <Property Name="pre-pro sample no" Type="bit" Nullable="false" />
+          <Property Name="Pre-pro sample other" Type="nvarchar" MaxLength="50" />
+          <Property Name="Quantity" Type="nvarchar" MaxLength="50" />
+          <Property Name="Emblem Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="First Order Yes" Type="bit" Nullable="false" />
+          <Property Name="First Order No" Type="bit" Nullable="false" />
+          <Property Name="Reorder BR/PO" Type="nvarchar" MaxLength="50" />
+          <Property Name="Date of Old order" Type="datetime" />
+          <Property Name="Length" Type="nvarchar" MaxLength="50" />
+          <Property Name="Width" Type="nvarchar" MaxLength="50" />
+          <Property Name="Actual size" Type="nvarchar" MaxLength="50" />
+          <Property Name="Shape circle" Type="bit" Nullable="false" />
+          <Property Name="Shape square" Type="bit" Nullable="false" />
+          <Property Name="Shape rect" Type="bit" Nullable="false" />
+          <Property Name="Shape Other" Type="bit" Nullable="false" />
+          <Property Name="Percent of emblem" Type="float" />
+          <Property Name="Price Each" Type="float" />
+          <Property Name="Deposit" Type="float" />
+          <Property Name="Border" Type="nvarchar" MaxLength="50" />
+          <Property Name="merrow" Type="bit" Nullable="false" />
+          <Property Name="hand cut" Type="bit" Nullable="false" />
+          <Property Name="other" Type="bit" Nullable="false" />
+          <Property Name="border other text" Type="nvarchar" MaxLength="50" />
+          <Property Name="backing plain" Type="bit" Nullable="false" />
+          <Property Name="backing heatseal" Type="bit" Nullable="false" />
+          <Property Name="backing plastic" Type="bit" Nullable="false" />
+          <Property Name="backing other" Type="bit" Nullable="false" />
+          <Property Name="backing other text" Type="nvarchar" MaxLength="50" />
+          <Property Name="special thread neon" Type="bit" Nullable="false" />
+          <Property Name="special thread metallic" Type="bit" Nullable="false" />
+          <Property Name="special thread other" Type="nvarchar" MaxLength="50" />
+          <Property Name="total colors" Type="nvarchar" MaxLength="50" />
+          <Property Name="color1" Type="nvarchar" MaxLength="50" />
+          <Property Name="color2" Type="nvarchar" MaxLength="50" />
+          <Property Name="color3" Type="nvarchar" MaxLength="50" />
+          <Property Name="color4" Type="nvarchar" MaxLength="50" />
+          <Property Name="color5" Type="nvarchar" MaxLength="50" />
+          <Property Name="color6" Type="nvarchar" MaxLength="50" />
+          <Property Name="color7" Type="nvarchar" MaxLength="50" />
+          <Property Name="color8" Type="nvarchar" MaxLength="50" />
+          <Property Name="color9" Type="nvarchar" MaxLength="50" />
+          <Property Name="color10" Type="nvarchar" MaxLength="50" />
+          <Property Name="color11" Type="nvarchar" MaxLength="50" />
+          <Property Name="color12" Type="nvarchar" MaxLength="50" />
+          <Property Name="special instructions" Type="nvarchar(max)" />
+          <Property Name="Ship via other text" Type="nvarchar" MaxLength="50" />
+          <Property Name="Background" Type="nvarchar" MaxLength="50" />
+          <Property Name="Duplicate Sample" Type="bit" Nullable="false" />
+          <Property Name="As Sample" Type="bit" Nullable="false" />
+          <Property Name="Reorder Exactly" Type="bit" Nullable="false" />
+          <Property Name="Reorder Change" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'RonPenta.dbo.qryCustomers/Emblems' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'RonPenta.dbo.sysHot Keys' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="sysHot Keys">
+          <Property Name="Hot Key" Type="nvarchar" MaxLength="1" />
+          <Property Name="Name" Type="nvarchar" MaxLength="20" />
+          <Property Name="Keystrokes" Type="nvarchar" MaxLength="100" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'RonPenta.dbo.tblBacking Types' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tblBacking Types">
+          <Property Name="Backing Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Size of Emblem" Type="real" />
+          <Property Name="Cost Per Emblem" Type="money" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'RonPenta.dbo.tblBorder Types' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tblBorder Types">
+          <Property Name="Border Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cost per Emblem" Type="money" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'RonPenta.dbo.tblCustomers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="tblCustomers">
+          <Key>
+            <PropertyRef Name="Use Drop Ship Address?" />
+            <PropertyRef Name="Auto Confirmation?" />
+            <PropertyRef Name="Deposit Required?" />
+            <PropertyRef Name="Deposit Confirmation?" />
+            <PropertyRef Name="CustomerInfoSent" />
+          </Key>
+          <Property Name="Customer ID" Type="int" />
+          <Property Name="Customer Code" Type="nvarchar" MaxLength="15" />
+          <Property Name="Company" Type="nvarchar" MaxLength="50" />
+          <Property Name="Contact Name" Type="nvarchar" MaxLength="20" />
+          <Property Name="Address1" Type="nvarchar" MaxLength="30" />
+          <Property Name="City" Type="nvarchar" MaxLength="25" />
+          <Property Name="State" Type="nvarchar" MaxLength="6" />
+          <Property Name="Zip" Type="nvarchar" MaxLength="12" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+          <Property Name="Fax/Other Phone" Type="nvarchar" MaxLength="20" />
+          <Property Name="Use Drop Ship Address?" Type="bit" Nullable="false" />
+          <Property Name="Drop Ship Company" Type="nvarchar" MaxLength="50" />
+          <Property Name="Drop Ship Address" Type="nvarchar" MaxLength="30" />
+          <Property Name="Drop Ship City" Type="nvarchar" MaxLength="25" />
+          <Property Name="Drop Ship State" Type="nvarchar" MaxLength="6" />
+          <Property Name="Drop Ship Zip" Type="nvarchar" MaxLength="12" />
+          <Property Name="Auto Confirmation?" Type="bit" Nullable="false" />
+          <Property Name="Deposit Required?" Type="bit" Nullable="false" />
+          <Property Name="Deposit Confirmation?" Type="bit" Nullable="false" />
+          <Property Name="Terms Code" Type="nvarchar" MaxLength="20" />
+          <Property Name="Ship Via" Type="nvarchar" MaxLength="20" />
+          <Property Name="Pricing Page" Type="nvarchar" MaxLength="20" />
+          <Property Name="Pricing Percent" Type="real" />
+          <Property Name="Keywords" Type="nvarchar" MaxLength="200" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="CustomerInfoSent" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'RonPenta.dbo.tblEmblemPercent' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tblEmblemPercent">
+          <Property Name="EmblemPercent" Type="float" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'RonPenta.dbo.tblMaterial Types' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tblMaterial Types">
+          <Property Name="Material Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Material Cost %" Type="real" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'RonPenta.dbo.tblNPI Emblem Orders' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="tblNPI Emblem Orders">
+          <Key>
+            <PropertyRef Name="First Order?" />
+            <PropertyRef Name="Special Price?" />
+            <PropertyRef Name="Drop Ship?" />
+            <PropertyRef Name="Deposit Required?" />
+            <PropertyRef Name="Deposit Confirmed?" />
+            <PropertyRef Name="Order Confirmed?" />
+            <PropertyRef Name="RushOrder" />
+            <PropertyRef Name="Duplicate" />
+            <PropertyRef Name="ReorderExactly" />
+            <PropertyRef Name="AsSample" />
+            <PropertyRef Name="ReorderChange" />
+            <PropertyRef Name="TungLi" />
+            <PropertyRef Name="FineThread" />
+            <PropertyRef Name="Event" />
+            <PropertyRef Name="RushOrd" />
+          </Key>
+          <Property Name="BR Number" Type="nvarchar" MaxLength="8" />
+          <Property Name="Customer Code" Type="nvarchar" MaxLength="15" />
+          <Property Name="Order Date" Type="datetime" />
+          <Property Name="Request Date" Type="datetime" />
+          <Property Name="Cust Request Date" Type="datetime" />
+          <Property Name="TW Confirm Date" Type="datetime" />
+          <Property Name="Ship Date" Type="datetime" />
+          <Property Name="PO Number" Type="nvarchar" MaxLength="20" />
+          <Property Name="Ordered By" Type="nvarchar" MaxLength="20" />
+          <Property Name="First Order?" Type="bit" Nullable="false" />
+          <Property Name="Reorder BR #" Type="nvarchar" MaxLength="20" />
+          <Property Name="Sample" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Length" Type="real" />
+          <Property Name="Width" Type="real" />
+          <Property Name="Size" Type="real" />
+          <Property Name="Size Info" Type="nvarchar" MaxLength="30" />
+          <Property Name="% of Emblem" Type="real" />
+          <Property Name="Price" Type="money" />
+          <Property Name="Price Per Unit" Type="money" />
+          <Property Name="Price List" Type="nvarchar" MaxLength="25" />
+          <Property Name="Price List %" Type="real" />
+          <Property Name="Deposit" Type="money" />
+          <Property Name="Sample Charge" Type="money" />
+          <Property Name="Rush Order?" Type="money" />
+          <Property Name="Order Total" Type="money" />
+          <Property Name="Special Price?" Type="bit" Nullable="false" />
+          <Property Name="Special Amount" Type="money" />
+          <Property Name="Drop Ship?" Type="bit" Nullable="false" />
+          <Property Name="Drop Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Drop Company" Type="nvarchar" MaxLength="50" />
+          <Property Name="Drop Address" Type="nvarchar" MaxLength="30" />
+          <Property Name="Drop City" Type="nvarchar" MaxLength="30" />
+          <Property Name="Drop State" Type="nvarchar" MaxLength="5" />
+          <Property Name="Drop Zip" Type="nvarchar" MaxLength="15" />
+          <Property Name="Deposit Required?" Type="bit" Nullable="false" />
+          <Property Name="Deposit Confirmed?" Type="bit" Nullable="false" />
+          <Property Name="Order Confirmed?" Type="bit" Nullable="false" />
+          <Property Name="Background" Type="nvarchar" MaxLength="50" />
+          <Property Name="Background Type" Type="nvarchar" MaxLength="25" />
+          <Property Name="Background Price %" Type="real" />
+          <Property Name="Border" Type="nvarchar" MaxLength="30" />
+          <Property Name="Border Type" Type="nvarchar" MaxLength="25" />
+          <Property Name="Border Price" Type="money" />
+          <Property Name="Backing" Type="nvarchar" MaxLength="30" />
+          <Property Name="Backing Price" Type="money" />
+          <Property Name="Special Thread" Type="nvarchar" MaxLength="15" />
+          <Property Name="Special Thread Price %" Type="real" />
+          <Property Name="Quantity" Type="float" />
+          <Property Name="Total Colors" Type="nvarchar" MaxLength="50" />
+          <Property Name="1 Color Break" Type="nvarchar" MaxLength="50" />
+          <Property Name="2 Color Break" Type="nvarchar" MaxLength="50" />
+          <Property Name="3 Color Break" Type="nvarchar" MaxLength="50" />
+          <Property Name="4 Color Break" Type="nvarchar" MaxLength="50" />
+          <Property Name="5 Color Break" Type="nvarchar" MaxLength="50" />
+          <Property Name="6 Color Break" Type="nvarchar" MaxLength="50" />
+          <Property Name="7 Color Break" Type="nvarchar" MaxLength="50" />
+          <Property Name="8 Color Break" Type="nvarchar" MaxLength="50" />
+          <Property Name="9 Color Break" Type="nvarchar" MaxLength="50" />
+          <Property Name="10 Color Break" Type="nvarchar" MaxLength="50" />
+          <Property Name="11 Color Break" Type="nvarchar" MaxLength="50" />
+          <Property Name="12 Color Break" Type="nvarchar" MaxLength="50" />
+          <Property Name="Art Design" Type="nvarchar(max)" />
+          <Property Name="Customer Notes" Type="nvarchar(max)" />
+          <Property Name="Rep" Type="nvarchar" MaxLength="5" />
+          <Property Name="RushOrder" Type="bit" Nullable="false" />
+          <Property Name="RushOrderPercent" Type="real" />
+          <Property Name="ShipVia" Type="nvarchar" MaxLength="50" />
+          <Property Name="Shape" Type="nvarchar" MaxLength="50" />
+          <Property Name="Duplicate" Type="bit" Nullable="false" />
+          <Property Name="ReorderExactly" Type="bit" Nullable="false" />
+          <Property Name="AsSample" Type="bit" Nullable="false" />
+          <Property Name="ReorderChange" Type="bit" Nullable="false" />
+          <Property Name="TungLi" Type="bit" Nullable="false" />
+          <Property Name="FineThread" Type="bit" Nullable="false" />
+          <Property Name="Event" Type="bit" Nullable="false" />
+          <Property Name="ShipCompany" Type="nvarchar" MaxLength="50" />
+          <Property Name="ShipAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="ShipCity" Type="nvarchar" MaxLength="50" />
+          <Property Name="ShipState" Type="nvarchar" MaxLength="50" />
+          <Property Name="ShipZip" Type="nvarchar" MaxLength="50" />
+          <Property Name="RushOrd" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'RonPenta.dbo.tblNPI Emblem Orders Backup' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="tblNPI Emblem Orders Backup">
+          <Key>
+            <PropertyRef Name="First Order?" />
+            <PropertyRef Name="Special Price?" />
+            <PropertyRef Name="Drop Ship?" />
+            <PropertyRef Name="Deposit Required?" />
+            <PropertyRef Name="Deposit Confirmed?" />
+            <PropertyRef Name="Order Confirmed?" />
+            <PropertyRef Name="RushOrder" />
+            <PropertyRef Name="Duplicate" />
+            <PropertyRef Name="ReorderExactly" />
+            <PropertyRef Name="AsSample" />
+            <PropertyRef Name="ReorderChange" />
+            <PropertyRef Name="TungLi" />
+            <PropertyRef Name="FineThread" />
+            <PropertyRef Name="Event" />
+            <PropertyRef Name="RushOrd" />
+          </Key>
+          <Property Name="BR Number" Type="nvarchar" MaxLength="8" />
+          <Property Name="Customer Code" Type="nvarchar" MaxLength="15" />
+          <Property Name="Order Date" Type="datetime" />
+          <Property Name="Request Date" Type="datetime" />
+          <Property Name="Cust Request Date" Type="datetime" />
+          <Property Name="TW Confirm Date" Type="datetime" />
+          <Property Name="Ship Date" Type="datetime" />
+          <Property Name="PO Number" Type="nvarchar" MaxLength="20" />
+          <Property Name="Ordered By" Type="nvarchar" MaxLength="20" />
+          <Property Name="First Order?" Type="bit" Nullable="false" />
+          <Property Name="Reorder BR #" Type="nvarchar" MaxLength="20" />
+          <Property Name="Sample" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Length" Type="real" />
+          <Property Name="Width" Type="real" />
+          <Property Name="Size" Type="real" />
+          <Property Name="Size Info" Type="nvarchar" MaxLength="30" />
+          <Property Name="% of Emblem" Type="real" />
+          <Property Name="Price" Type="money" />
+          <Property Name="Price Per Unit" Type="money" />
+          <Property Name="Price List" Type="nvarchar" MaxLength="25" />
+          <Property Name="Price List %" Type="real" />
+          <Property Name="Deposit" Type="money" />
+          <Property Name="Sample Charge" Type="money" />
+          <Property Name="Rush Order?" Type="money" />
+          <Property Name="Order Total" Type="money" />
+          <Property Name="Special Price?" Type="bit" Nullable="false" />
+          <Property Name="Special Amount" Type="money" />
+          <Property Name="Drop Ship?" Type="bit" Nullable="false" />
+          <Property Name="Drop Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Drop Company" Type="nvarchar" MaxLength="50" />
+          <Property Name="Drop Address" Type="nvarchar" MaxLength="30" />
+          <Property Name="Drop City" Type="nvarchar" MaxLength="30" />
+          <Property Name="Drop State" Type="nvarchar" MaxLength="5" />
+          <Property Name="Drop Zip" Type="nvarchar" MaxLength="15" />
+          <Property Name="Deposit Required?" Type="bit" Nullable="false" />
+          <Property Name="Deposit Confirmed?" Type="bit" Nullable="false" />
+          <Property Name="Order Confirmed?" Type="bit" Nullable="false" />
+          <Property Name="Background" Type="nvarchar" MaxLength="50" />
+          <Property Name="Background Type" Type="nvarchar" MaxLength="25" />
+          <Property Name="Background Price %" Type="real" />
+          <Property Name="Border" Type="nvarchar" MaxLength="30" />
+          <Property Name="Border Type" Type="nvarchar" MaxLength="25" />
+          <Property Name="Border Price" Type="money" />
+          <Property Name="Backing" Type="nvarchar" MaxLength="30" />
+          <Property Name="Backing Price" Type="money" />
+          <Property Name="Special Thread" Type="nvarchar" MaxLength="15" />
+          <Property Name="Special Thread Price %" Type="real" />
+          <Property Name="Quantity" Type="float" />
+          <Property Name="Total Colors" Type="nvarchar" MaxLength="50" />
+          <Property Name="1 Color Break" Type="nvarchar" MaxLength="50" />
+          <Property Name="2 Color Break" Type="nvarchar" MaxLength="50" />
+          <Property Name="3 Color Break" Type="nvarchar" MaxLength="50" />
+          <Property Name="4 Color Break" Type="nvarchar" MaxLength="50" />
+          <Property Name="5 Color Break" Type="nvarchar" MaxLength="50" />
+          <Property Name="6 Color Break" Type="nvarchar" MaxLength="50" />
+          <Property Name="7 Color Break" Type="nvarchar" MaxLength="50" />
+          <Property Name="8 Color Break" Type="nvarchar" MaxLength="50" />
+          <Property Name="9 Color Break" Type="nvarchar" MaxLength="50" />
+          <Property Name="10 Color Break" Type="nvarchar" MaxLength="50" />
+          <Property Name="11 Color Break" Type="nvarchar" MaxLength="50" />
+          <Property Name="12 Color Break" Type="nvarchar" MaxLength="50" />
+          <Property Name="Art Design" Type="nvarchar(max)" />
+          <Property Name="Customer Notes" Type="nvarchar(max)" />
+          <Property Name="Rep" Type="nvarchar" MaxLength="5" />
+          <Property Name="RushOrder" Type="bit" Nullable="false" />
+          <Property Name="RushOrderPercent" Type="real" />
+          <Property Name="ShipVia" Type="nvarchar" MaxLength="50" />
+          <Property Name="Shape" Type="nvarchar" MaxLength="50" />
+          <Property Name="Duplicate" Type="bit" Nullable="false" />
+          <Property Name="ReorderExactly" Type="bit" Nullable="false" />
+          <Property Name="AsSample" Type="bit" Nullable="false" />
+          <Property Name="ReorderChange" Type="bit" Nullable="false" />
+          <Property Name="TungLi" Type="bit" Nullable="false" />
+          <Property Name="FineThread" Type="bit" Nullable="false" />
+          <Property Name="Event" Type="bit" Nullable="false" />
+          <Property Name="ShipCompany" Type="nvarchar" MaxLength="50" />
+          <Property Name="ShipAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="ShipCity" Type="nvarchar" MaxLength="50" />
+          <Property Name="ShipState" Type="nvarchar" MaxLength="50" />
+          <Property Name="ShipZip" Type="nvarchar" MaxLength="50" />
+          <Property Name="RushOrd" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'RonPenta.dbo.tblOrderedBy' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tblOrderedBy">
+          <Property Name="OrderBy" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'RonPenta.dbo.tblPrice List Names' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tblPrice List Names">
+          <Property Name="Price List Name" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'RonPenta.dbo.tblPrice Lists Data' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tblPrice Lists Data">
+          <Property Name="Price List" Type="nvarchar" MaxLength="25" />
+          <Property Name="Size" Type="real" />
+          <Property Name="Percent" Type="float" />
+          <Property Name="50" Type="money" />
+          <Property Name="100" Type="money" />
+          <Property Name="200" Type="money" />
+          <Property Name="300" Type="money" />
+          <Property Name="500" Type="money" />
+          <Property Name="1000" Type="money" />
+          <Property Name="2000" Type="money" />
+          <Property Name="3000" Type="money" />
+          <Property Name="5000" Type="money" />
+          <Property Name="10000" Type="money" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'RonPenta.dbo.tblSampleInfo' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tblSampleInfo">
+          <Property Name="Sample" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'RonPenta.dbo.tblShape' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tblShape">
+          <Property Name="Shape" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'RonPenta.dbo.tblShipVia' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tblShipVia">
+          <Property Name="ShipVia" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'RonPenta.dbo.tblSpecialThread' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tblSpecialThread">
+          <Property Name="SpecialThread" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'RonPenta.dbo.tmpBacking Types' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tmpBacking Types">
+          <Property Name="Backing Type" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
+        <EntityContainer Name="RonPentaModelStoreContainer">
+          <EntitySet Name="Emblem Order Information" EntityType="Self.Emblem Order Information" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Emblem Order Information].[Customer ID] AS [Customer ID], 
+    [Emblem Order Information].[Contact Name] AS [Contact Name], 
+    [Emblem Order Information].[Company] AS [Company], 
+    [Emblem Order Information].[Address1] AS [Address1], 
+    [Emblem Order Information].[City] AS [City], 
+    [Emblem Order Information].[State] AS [State], 
+    [Emblem Order Information].[Zip] AS [Zip], 
+    [Emblem Order Information].[Phone] AS [Phone], 
+    [Emblem Order Information].[Fax/other phone] AS [Fax/other phone], 
+    [Emblem Order Information].[Customer code] AS [Customer code], 
+    [Emblem Order Information].[Terms Code] AS [Terms Code], 
+    [Emblem Order Information].[PO Number] AS [PO Number], 
+    [Emblem Order Information].[Oder Date] AS [Oder Date], 
+    [Emblem Order Information].[Request Date] AS [Request Date], 
+    [Emblem Order Information].[Rush Order Yes] AS [Rush Order Yes], 
+    [Emblem Order Information].[Rush Order No] AS [Rush Order No], 
+    [Emblem Order Information].[Ship Via Red] AS [Ship Via Red], 
+    [Emblem Order Information].[Ship Via Blue] AS [Ship Via Blue], 
+    [Emblem Order Information].[Ship Via Orange] AS [Ship Via Orange], 
+    [Emblem Order Information].[Ship Via Ground] AS [Ship Via Ground], 
+    [Emblem Order Information].[Ship Via Other] AS [Ship Via Other], 
+    [Emblem Order Information].[Pre-pro sample yes] AS [Pre-pro sample yes], 
+    [Emblem Order Information].[pre-pro sample no] AS [pre-pro sample no], 
+    [Emblem Order Information].[Pre-pro sample other] AS [Pre-pro sample other], 
+    [Emblem Order Information].[Quantity] AS [Quantity], 
+    [Emblem Order Information].[Emblem Name] AS [Emblem Name], 
+    [Emblem Order Information].[First Order Yes] AS [First Order Yes], 
+    [Emblem Order Information].[First Order No] AS [First Order No], 
+    [Emblem Order Information].[Reorder BR/PO] AS [Reorder BR/PO], 
+    [Emblem Order Information].[Date of Old order] AS [Date of Old order], 
+    [Emblem Order Information].[Length] AS [Length], 
+    [Emblem Order Information].[Width] AS [Width], 
+    [Emblem Order Information].[Actual size] AS [Actual size], 
+    [Emblem Order Information].[Shape circle] AS [Shape circle], 
+    [Emblem Order Information].[Shape square] AS [Shape square], 
+    [Emblem Order Information].[Shape rect] AS [Shape rect], 
+    [Emblem Order Information].[Shape Other] AS [Shape Other], 
+    [Emblem Order Information].[Percent of emblem] AS [Percent of emblem], 
+    [Emblem Order Information].[Price Each] AS [Price Each], 
+    [Emblem Order Information].[Deposit] AS [Deposit], 
+    [Emblem Order Information].[Border] AS [Border], 
+    [Emblem Order Information].[merrow] AS [merrow], 
+    [Emblem Order Information].[hand cut] AS [hand cut], 
+    [Emblem Order Information].[other] AS [other], 
+    [Emblem Order Information].[border other text] AS [border other text], 
+    [Emblem Order Information].[backing plain] AS [backing plain], 
+    [Emblem Order Information].[backing heatseal] AS [backing heatseal], 
+    [Emblem Order Information].[backing plastic] AS [backing plastic], 
+    [Emblem Order Information].[backing other] AS [backing other], 
+    [Emblem Order Information].[backing other text] AS [backing other text], 
+    [Emblem Order Information].[special thread neon] AS [special thread neon], 
+    [Emblem Order Information].[special thread metallic] AS [special thread metallic], 
+    [Emblem Order Information].[special thread other] AS [special thread other], 
+    [Emblem Order Information].[total colors] AS [total colors], 
+    [Emblem Order Information].[color1] AS [color1], 
+    [Emblem Order Information].[color2] AS [color2], 
+    [Emblem Order Information].[color3] AS [color3], 
+    [Emblem Order Information].[color4] AS [color4], 
+    [Emblem Order Information].[color5] AS [color5], 
+    [Emblem Order Information].[color6] AS [color6], 
+    [Emblem Order Information].[color7] AS [color7], 
+    [Emblem Order Information].[color8] AS [color8], 
+    [Emblem Order Information].[color9] AS [color9], 
+    [Emblem Order Information].[color10] AS [color10], 
+    [Emblem Order Information].[color11] AS [color11], 
+    [Emblem Order Information].[color12] AS [color12], 
+    [Emblem Order Information].[special instructions] AS [special instructions], 
+    [Emblem Order Information].[Ship via other text] AS [Ship via other text], 
+    [Emblem Order Information].[Background] AS [Background], 
+    [Emblem Order Information].[Duplicate Sample] AS [Duplicate Sample], 
+    [Emblem Order Information].[As Sample] AS [As Sample], 
+    [Emblem Order Information].[Reorder Exactly] AS [Reorder Exactly], 
+    [Emblem Order Information].[Reorder Change] AS [Reorder Change]
+    FROM [dbo].[Emblem Order Information] AS [Emblem Order Information]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="tblCustomers" EntityType="Self.tblCustomers" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tblCustomers].[Customer ID] AS [Customer ID], 
+    [tblCustomers].[Customer Code] AS [Customer Code], 
+    [tblCustomers].[Company] AS [Company], 
+    [tblCustomers].[Contact Name] AS [Contact Name], 
+    [tblCustomers].[Address1] AS [Address1], 
+    [tblCustomers].[City] AS [City], 
+    [tblCustomers].[State] AS [State], 
+    [tblCustomers].[Zip] AS [Zip], 
+    [tblCustomers].[Phone] AS [Phone], 
+    [tblCustomers].[Fax/Other Phone] AS [Fax/Other Phone], 
+    [tblCustomers].[Use Drop Ship Address?] AS [Use Drop Ship Address?], 
+    [tblCustomers].[Drop Ship Company] AS [Drop Ship Company], 
+    [tblCustomers].[Drop Ship Address] AS [Drop Ship Address], 
+    [tblCustomers].[Drop Ship City] AS [Drop Ship City], 
+    [tblCustomers].[Drop Ship State] AS [Drop Ship State], 
+    [tblCustomers].[Drop Ship Zip] AS [Drop Ship Zip], 
+    [tblCustomers].[Auto Confirmation?] AS [Auto Confirmation?], 
+    [tblCustomers].[Deposit Required?] AS [Deposit Required?], 
+    [tblCustomers].[Deposit Confirmation?] AS [Deposit Confirmation?], 
+    [tblCustomers].[Terms Code] AS [Terms Code], 
+    [tblCustomers].[Ship Via] AS [Ship Via], 
+    [tblCustomers].[Pricing Page] AS [Pricing Page], 
+    [tblCustomers].[Pricing Percent] AS [Pricing Percent], 
+    [tblCustomers].[Keywords] AS [Keywords], 
+    [tblCustomers].[Notes] AS [Notes], 
+    [tblCustomers].[CustomerInfoSent] AS [CustomerInfoSent]
+    FROM [dbo].[tblCustomers] AS [tblCustomers]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="tblNPI Emblem Orders" EntityType="Self.tblNPI Emblem Orders" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tblNPI Emblem Orders].[BR Number] AS [BR Number], 
+    [tblNPI Emblem Orders].[Customer Code] AS [Customer Code], 
+    [tblNPI Emblem Orders].[Order Date] AS [Order Date], 
+    [tblNPI Emblem Orders].[Request Date] AS [Request Date], 
+    [tblNPI Emblem Orders].[Cust Request Date] AS [Cust Request Date], 
+    [tblNPI Emblem Orders].[TW Confirm Date] AS [TW Confirm Date], 
+    [tblNPI Emblem Orders].[Ship Date] AS [Ship Date], 
+    [tblNPI Emblem Orders].[PO Number] AS [PO Number], 
+    [tblNPI Emblem Orders].[Ordered By] AS [Ordered By], 
+    [tblNPI Emblem Orders].[First Order?] AS [First Order?], 
+    [tblNPI Emblem Orders].[Reorder BR #] AS [Reorder BR #], 
+    [tblNPI Emblem Orders].[Sample] AS [Sample], 
+    [tblNPI Emblem Orders].[Name] AS [Name], 
+    [tblNPI Emblem Orders].[Length] AS [Length], 
+    [tblNPI Emblem Orders].[Width] AS [Width], 
+    [tblNPI Emblem Orders].[Size] AS [Size], 
+    [tblNPI Emblem Orders].[Size Info] AS [Size Info], 
+    [tblNPI Emblem Orders].[% of Emblem] AS [% of Emblem], 
+    [tblNPI Emblem Orders].[Price] AS [Price], 
+    [tblNPI Emblem Orders].[Price Per Unit] AS [Price Per Unit], 
+    [tblNPI Emblem Orders].[Price List] AS [Price List], 
+    [tblNPI Emblem Orders].[Price List %] AS [Price List %], 
+    [tblNPI Emblem Orders].[Deposit] AS [Deposit], 
+    [tblNPI Emblem Orders].[Sample Charge] AS [Sample Charge], 
+    [tblNPI Emblem Orders].[Rush Order?] AS [Rush Order?], 
+    [tblNPI Emblem Orders].[Order Total] AS [Order Total], 
+    [tblNPI Emblem Orders].[Special Price?] AS [Special Price?], 
+    [tblNPI Emblem Orders].[Special Amount] AS [Special Amount], 
+    [tblNPI Emblem Orders].[Drop Ship?] AS [Drop Ship?], 
+    [tblNPI Emblem Orders].[Drop Name] AS [Drop Name], 
+    [tblNPI Emblem Orders].[Drop Company] AS [Drop Company], 
+    [tblNPI Emblem Orders].[Drop Address] AS [Drop Address], 
+    [tblNPI Emblem Orders].[Drop City] AS [Drop City], 
+    [tblNPI Emblem Orders].[Drop State] AS [Drop State], 
+    [tblNPI Emblem Orders].[Drop Zip] AS [Drop Zip], 
+    [tblNPI Emblem Orders].[Deposit Required?] AS [Deposit Required?], 
+    [tblNPI Emblem Orders].[Deposit Confirmed?] AS [Deposit Confirmed?], 
+    [tblNPI Emblem Orders].[Order Confirmed?] AS [Order Confirmed?], 
+    [tblNPI Emblem Orders].[Background] AS [Background], 
+    [tblNPI Emblem Orders].[Background Type] AS [Background Type], 
+    [tblNPI Emblem Orders].[Background Price %] AS [Background Price %], 
+    [tblNPI Emblem Orders].[Border] AS [Border], 
+    [tblNPI Emblem Orders].[Border Type] AS [Border Type], 
+    [tblNPI Emblem Orders].[Border Price] AS [Border Price], 
+    [tblNPI Emblem Orders].[Backing] AS [Backing], 
+    [tblNPI Emblem Orders].[Backing Price] AS [Backing Price], 
+    [tblNPI Emblem Orders].[Special Thread] AS [Special Thread], 
+    [tblNPI Emblem Orders].[Special Thread Price %] AS [Special Thread Price %], 
+    [tblNPI Emblem Orders].[Quantity] AS [Quantity], 
+    [tblNPI Emblem Orders].[Total Colors] AS [Total Colors], 
+    [tblNPI Emblem Orders].[1 Color Break] AS [1 Color Break], 
+    [tblNPI Emblem Orders].[2 Color Break] AS [2 Color Break], 
+    [tblNPI Emblem Orders].[3 Color Break] AS [3 Color Break], 
+    [tblNPI Emblem Orders].[4 Color Break] AS [4 Color Break], 
+    [tblNPI Emblem Orders].[5 Color Break] AS [5 Color Break], 
+    [tblNPI Emblem Orders].[6 Color Break] AS [6 Color Break], 
+    [tblNPI Emblem Orders].[7 Color Break] AS [7 Color Break], 
+    [tblNPI Emblem Orders].[8 Color Break] AS [8 Color Break], 
+    [tblNPI Emblem Orders].[9 Color Break] AS [9 Color Break], 
+    [tblNPI Emblem Orders].[10 Color Break] AS [10 Color Break], 
+    [tblNPI Emblem Orders].[11 Color Break] AS [11 Color Break], 
+    [tblNPI Emblem Orders].[12 Color Break] AS [12 Color Break], 
+    [tblNPI Emblem Orders].[Art Design] AS [Art Design], 
+    [tblNPI Emblem Orders].[Customer Notes] AS [Customer Notes], 
+    [tblNPI Emblem Orders].[Rep] AS [Rep], 
+    [tblNPI Emblem Orders].[RushOrder] AS [RushOrder], 
+    [tblNPI Emblem Orders].[RushOrderPercent] AS [RushOrderPercent], 
+    [tblNPI Emblem Orders].[ShipVia] AS [ShipVia], 
+    [tblNPI Emblem Orders].[Shape] AS [Shape], 
+    [tblNPI Emblem Orders].[Duplicate] AS [Duplicate], 
+    [tblNPI Emblem Orders].[ReorderExactly] AS [ReorderExactly], 
+    [tblNPI Emblem Orders].[AsSample] AS [AsSample], 
+    [tblNPI Emblem Orders].[ReorderChange] AS [ReorderChange], 
+    [tblNPI Emblem Orders].[TungLi] AS [TungLi], 
+    [tblNPI Emblem Orders].[FineThread] AS [FineThread], 
+    [tblNPI Emblem Orders].[Event] AS [Event], 
+    [tblNPI Emblem Orders].[ShipCompany] AS [ShipCompany], 
+    [tblNPI Emblem Orders].[ShipAddress] AS [ShipAddress], 
+    [tblNPI Emblem Orders].[ShipCity] AS [ShipCity], 
+    [tblNPI Emblem Orders].[ShipState] AS [ShipState], 
+    [tblNPI Emblem Orders].[ShipZip] AS [ShipZip], 
+    [tblNPI Emblem Orders].[RushOrd] AS [RushOrd]
+    FROM [dbo].[tblNPI Emblem Orders] AS [tblNPI Emblem Orders]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="tblNPI Emblem Orders Backup" EntityType="Self.tblNPI Emblem Orders Backup" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tblNPI Emblem Orders Backup].[BR Number] AS [BR Number], 
+    [tblNPI Emblem Orders Backup].[Customer Code] AS [Customer Code], 
+    [tblNPI Emblem Orders Backup].[Order Date] AS [Order Date], 
+    [tblNPI Emblem Orders Backup].[Request Date] AS [Request Date], 
+    [tblNPI Emblem Orders Backup].[Cust Request Date] AS [Cust Request Date], 
+    [tblNPI Emblem Orders Backup].[TW Confirm Date] AS [TW Confirm Date], 
+    [tblNPI Emblem Orders Backup].[Ship Date] AS [Ship Date], 
+    [tblNPI Emblem Orders Backup].[PO Number] AS [PO Number], 
+    [tblNPI Emblem Orders Backup].[Ordered By] AS [Ordered By], 
+    [tblNPI Emblem Orders Backup].[First Order?] AS [First Order?], 
+    [tblNPI Emblem Orders Backup].[Reorder BR #] AS [Reorder BR #], 
+    [tblNPI Emblem Orders Backup].[Sample] AS [Sample], 
+    [tblNPI Emblem Orders Backup].[Name] AS [Name], 
+    [tblNPI Emblem Orders Backup].[Length] AS [Length], 
+    [tblNPI Emblem Orders Backup].[Width] AS [Width], 
+    [tblNPI Emblem Orders Backup].[Size] AS [Size], 
+    [tblNPI Emblem Orders Backup].[Size Info] AS [Size Info], 
+    [tblNPI Emblem Orders Backup].[% of Emblem] AS [% of Emblem], 
+    [tblNPI Emblem Orders Backup].[Price] AS [Price], 
+    [tblNPI Emblem Orders Backup].[Price Per Unit] AS [Price Per Unit], 
+    [tblNPI Emblem Orders Backup].[Price List] AS [Price List], 
+    [tblNPI Emblem Orders Backup].[Price List %] AS [Price List %], 
+    [tblNPI Emblem Orders Backup].[Deposit] AS [Deposit], 
+    [tblNPI Emblem Orders Backup].[Sample Charge] AS [Sample Charge], 
+    [tblNPI Emblem Orders Backup].[Rush Order?] AS [Rush Order?], 
+    [tblNPI Emblem Orders Backup].[Order Total] AS [Order Total], 
+    [tblNPI Emblem Orders Backup].[Special Price?] AS [Special Price?], 
+    [tblNPI Emblem Orders Backup].[Special Amount] AS [Special Amount], 
+    [tblNPI Emblem Orders Backup].[Drop Ship?] AS [Drop Ship?], 
+    [tblNPI Emblem Orders Backup].[Drop Name] AS [Drop Name], 
+    [tblNPI Emblem Orders Backup].[Drop Company] AS [Drop Company], 
+    [tblNPI Emblem Orders Backup].[Drop Address] AS [Drop Address], 
+    [tblNPI Emblem Orders Backup].[Drop City] AS [Drop City], 
+    [tblNPI Emblem Orders Backup].[Drop State] AS [Drop State], 
+    [tblNPI Emblem Orders Backup].[Drop Zip] AS [Drop Zip], 
+    [tblNPI Emblem Orders Backup].[Deposit Required?] AS [Deposit Required?], 
+    [tblNPI Emblem Orders Backup].[Deposit Confirmed?] AS [Deposit Confirmed?], 
+    [tblNPI Emblem Orders Backup].[Order Confirmed?] AS [Order Confirmed?], 
+    [tblNPI Emblem Orders Backup].[Background] AS [Background], 
+    [tblNPI Emblem Orders Backup].[Background Type] AS [Background Type], 
+    [tblNPI Emblem Orders Backup].[Background Price %] AS [Background Price %], 
+    [tblNPI Emblem Orders Backup].[Border] AS [Border], 
+    [tblNPI Emblem Orders Backup].[Border Type] AS [Border Type], 
+    [tblNPI Emblem Orders Backup].[Border Price] AS [Border Price], 
+    [tblNPI Emblem Orders Backup].[Backing] AS [Backing], 
+    [tblNPI Emblem Orders Backup].[Backing Price] AS [Backing Price], 
+    [tblNPI Emblem Orders Backup].[Special Thread] AS [Special Thread], 
+    [tblNPI Emblem Orders Backup].[Special Thread Price %] AS [Special Thread Price %], 
+    [tblNPI Emblem Orders Backup].[Quantity] AS [Quantity], 
+    [tblNPI Emblem Orders Backup].[Total Colors] AS [Total Colors], 
+    [tblNPI Emblem Orders Backup].[1 Color Break] AS [1 Color Break], 
+    [tblNPI Emblem Orders Backup].[2 Color Break] AS [2 Color Break], 
+    [tblNPI Emblem Orders Backup].[3 Color Break] AS [3 Color Break], 
+    [tblNPI Emblem Orders Backup].[4 Color Break] AS [4 Color Break], 
+    [tblNPI Emblem Orders Backup].[5 Color Break] AS [5 Color Break], 
+    [tblNPI Emblem Orders Backup].[6 Color Break] AS [6 Color Break], 
+    [tblNPI Emblem Orders Backup].[7 Color Break] AS [7 Color Break], 
+    [tblNPI Emblem Orders Backup].[8 Color Break] AS [8 Color Break], 
+    [tblNPI Emblem Orders Backup].[9 Color Break] AS [9 Color Break], 
+    [tblNPI Emblem Orders Backup].[10 Color Break] AS [10 Color Break], 
+    [tblNPI Emblem Orders Backup].[11 Color Break] AS [11 Color Break], 
+    [tblNPI Emblem Orders Backup].[12 Color Break] AS [12 Color Break], 
+    [tblNPI Emblem Orders Backup].[Art Design] AS [Art Design], 
+    [tblNPI Emblem Orders Backup].[Customer Notes] AS [Customer Notes], 
+    [tblNPI Emblem Orders Backup].[Rep] AS [Rep], 
+    [tblNPI Emblem Orders Backup].[RushOrder] AS [RushOrder], 
+    [tblNPI Emblem Orders Backup].[RushOrderPercent] AS [RushOrderPercent], 
+    [tblNPI Emblem Orders Backup].[ShipVia] AS [ShipVia], 
+    [tblNPI Emblem Orders Backup].[Shape] AS [Shape], 
+    [tblNPI Emblem Orders Backup].[Duplicate] AS [Duplicate], 
+    [tblNPI Emblem Orders Backup].[ReorderExactly] AS [ReorderExactly], 
+    [tblNPI Emblem Orders Backup].[AsSample] AS [AsSample], 
+    [tblNPI Emblem Orders Backup].[ReorderChange] AS [ReorderChange], 
+    [tblNPI Emblem Orders Backup].[TungLi] AS [TungLi], 
+    [tblNPI Emblem Orders Backup].[FineThread] AS [FineThread], 
+    [tblNPI Emblem Orders Backup].[Event] AS [Event], 
+    [tblNPI Emblem Orders Backup].[ShipCompany] AS [ShipCompany], 
+    [tblNPI Emblem Orders Backup].[ShipAddress] AS [ShipAddress], 
+    [tblNPI Emblem Orders Backup].[ShipCity] AS [ShipCity], 
+    [tblNPI Emblem Orders Backup].[ShipState] AS [ShipState], 
+    [tblNPI Emblem Orders Backup].[ShipZip] AS [ShipZip], 
+    [tblNPI Emblem Orders Backup].[RushOrd] AS [RushOrd]
+    FROM [dbo].[tblNPI Emblem Orders Backup] AS [tblNPI Emblem Orders Backup]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RonPentaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Emblem_Order_Information">
+          <Key>
+            <PropertyRef Name="Customer_ID" />
+            <PropertyRef Name="Rush_Order_Yes" />
+            <PropertyRef Name="Rush_Order_No" />
+            <PropertyRef Name="Ship_Via_Red" />
+            <PropertyRef Name="Ship_Via_Blue" />
+            <PropertyRef Name="Ship_Via_Orange" />
+            <PropertyRef Name="Ship_Via_Ground" />
+            <PropertyRef Name="Ship_Via_Other" />
+            <PropertyRef Name="Pre_pro_sample_yes" />
+            <PropertyRef Name="pre_pro_sample_no" />
+            <PropertyRef Name="First_Order_Yes" />
+            <PropertyRef Name="First_Order_No" />
+            <PropertyRef Name="Shape_circle" />
+            <PropertyRef Name="Shape_square" />
+            <PropertyRef Name="Shape_rect" />
+            <PropertyRef Name="Shape_Other" />
+            <PropertyRef Name="merrow" />
+            <PropertyRef Name="hand_cut" />
+            <PropertyRef Name="other" />
+            <PropertyRef Name="backing_plain" />
+            <PropertyRef Name="backing_heatseal" />
+            <PropertyRef Name="backing_plastic" />
+            <PropertyRef Name="backing_other" />
+            <PropertyRef Name="special_thread_neon" />
+            <PropertyRef Name="special_thread_metallic" />
+            <PropertyRef Name="Duplicate_Sample" />
+            <PropertyRef Name="As_Sample" />
+            <PropertyRef Name="Reorder_Exactly" />
+            <PropertyRef Name="Reorder_Change" />
+          </Key>
+          <Property Name="Customer_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Contact_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Company" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Zip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Fax_other_phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Customer_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Terms_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PO_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Oder_Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Request_Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Rush_Order_Yes" Type="Boolean" Nullable="false" />
+          <Property Name="Rush_Order_No" Type="Boolean" Nullable="false" />
+          <Property Name="Ship_Via_Red" Type="Boolean" Nullable="false" />
+          <Property Name="Ship_Via_Blue" Type="Boolean" Nullable="false" />
+          <Property Name="Ship_Via_Orange" Type="Boolean" Nullable="false" />
+          <Property Name="Ship_Via_Ground" Type="Boolean" Nullable="false" />
+          <Property Name="Ship_Via_Other" Type="Boolean" Nullable="false" />
+          <Property Name="Pre_pro_sample_yes" Type="Boolean" Nullable="false" />
+          <Property Name="pre_pro_sample_no" Type="Boolean" Nullable="false" />
+          <Property Name="Pre_pro_sample_other" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Quantity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Emblem_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="First_Order_Yes" Type="Boolean" Nullable="false" />
+          <Property Name="First_Order_No" Type="Boolean" Nullable="false" />
+          <Property Name="Reorder_BR_PO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Date_of_Old_order" Type="DateTime" Precision="3" />
+          <Property Name="Length" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Width" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Actual_size" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Shape_circle" Type="Boolean" Nullable="false" />
+          <Property Name="Shape_square" Type="Boolean" Nullable="false" />
+          <Property Name="Shape_rect" Type="Boolean" Nullable="false" />
+          <Property Name="Shape_Other" Type="Boolean" Nullable="false" />
+          <Property Name="Percent_of_emblem" Type="Double" />
+          <Property Name="Price_Each" Type="Double" />
+          <Property Name="Deposit" Type="Double" />
+          <Property Name="Border" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="merrow" Type="Boolean" Nullable="false" />
+          <Property Name="hand_cut" Type="Boolean" Nullable="false" />
+          <Property Name="other" Type="Boolean" Nullable="false" />
+          <Property Name="border_other_text" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="backing_plain" Type="Boolean" Nullable="false" />
+          <Property Name="backing_heatseal" Type="Boolean" Nullable="false" />
+          <Property Name="backing_plastic" Type="Boolean" Nullable="false" />
+          <Property Name="backing_other" Type="Boolean" Nullable="false" />
+          <Property Name="backing_other_text" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="special_thread_neon" Type="Boolean" Nullable="false" />
+          <Property Name="special_thread_metallic" Type="Boolean" Nullable="false" />
+          <Property Name="special_thread_other" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="total_colors" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="color1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="color2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="color3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="color4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="color5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="color6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="color7" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="color8" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="color9" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="color10" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="color11" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="color12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="special_instructions" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Ship_via_other_text" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Background" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Duplicate_Sample" Type="Boolean" Nullable="false" />
+          <Property Name="As_Sample" Type="Boolean" Nullable="false" />
+          <Property Name="Reorder_Exactly" Type="Boolean" Nullable="false" />
+          <Property Name="Reorder_Change" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblCustomer">
+          <Key>
+            <PropertyRef Name="Use_Drop_Ship_Address_" />
+            <PropertyRef Name="Auto_Confirmation_" />
+            <PropertyRef Name="Deposit_Required_" />
+            <PropertyRef Name="Deposit_Confirmation_" />
+            <PropertyRef Name="CustomerInfoSent" />
+          </Key>
+          <Property Name="Customer_ID" Type="Int32" />
+          <Property Name="Customer_Code" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Company" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Contact_Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Address1" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="Zip" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Fax_Other_Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Use_Drop_Ship_Address_" Type="Boolean" Nullable="false" />
+          <Property Name="Drop_Ship_Company" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Drop_Ship_Address" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Drop_Ship_City" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Drop_Ship_State" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="Drop_Ship_Zip" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="Auto_Confirmation_" Type="Boolean" Nullable="false" />
+          <Property Name="Deposit_Required_" Type="Boolean" Nullable="false" />
+          <Property Name="Deposit_Confirmation_" Type="Boolean" Nullable="false" />
+          <Property Name="Terms_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Ship_Via" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Pricing_Page" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Pricing_Percent" Type="Single" />
+          <Property Name="Keywords" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerInfoSent" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblNPI_Emblem_Order">
+          <Key>
+            <PropertyRef Name="First_Order_" />
+            <PropertyRef Name="Special_Price_" />
+            <PropertyRef Name="Drop_Ship_" />
+            <PropertyRef Name="Deposit_Required_" />
+            <PropertyRef Name="Deposit_Confirmed_" />
+            <PropertyRef Name="Order_Confirmed_" />
+            <PropertyRef Name="RushOrder" />
+            <PropertyRef Name="Duplicate" />
+            <PropertyRef Name="ReorderExactly" />
+            <PropertyRef Name="AsSample" />
+            <PropertyRef Name="ReorderChange" />
+            <PropertyRef Name="TungLi" />
+            <PropertyRef Name="FineThread" />
+            <PropertyRef Name="Event" />
+            <PropertyRef Name="RushOrd" />
+          </Key>
+          <Property Name="BR_Number" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="Customer_Code" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Order_Date" Type="DateTime" Precision="3" />
+          <Property Name="Request_Date" Type="DateTime" Precision="3" />
+          <Property Name="Cust_Request_Date" Type="DateTime" Precision="3" />
+          <Property Name="TW_Confirm_Date" Type="DateTime" Precision="3" />
+          <Property Name="Ship_Date" Type="DateTime" Precision="3" />
+          <Property Name="PO_Number" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Ordered_By" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="First_Order_" Type="Boolean" Nullable="false" />
+          <Property Name="Reorder_BR__" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Sample" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Length" Type="Single" />
+          <Property Name="Width" Type="Single" />
+          <Property Name="Size" Type="Single" />
+          <Property Name="Size_Info" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="C__of_Emblem" Type="Single" />
+          <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Price_Per_Unit" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Price_List" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Price_List__" Type="Single" />
+          <Property Name="Deposit" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Sample_Charge" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Rush_Order_" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Order_Total" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Special_Price_" Type="Boolean" Nullable="false" />
+          <Property Name="Special_Amount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Drop_Ship_" Type="Boolean" Nullable="false" />
+          <Property Name="Drop_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Drop_Company" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Drop_Address" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Drop_City" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Drop_State" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="Drop_Zip" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Deposit_Required_" Type="Boolean" Nullable="false" />
+          <Property Name="Deposit_Confirmed_" Type="Boolean" Nullable="false" />
+          <Property Name="Order_Confirmed_" Type="Boolean" Nullable="false" />
+          <Property Name="Background" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Background_Type" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Background_Price__" Type="Single" />
+          <Property Name="Border" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Border_Type" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Border_Price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Backing" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Backing_Price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Special_Thread" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Special_Thread_Price__" Type="Single" />
+          <Property Name="Quantity" Type="Double" />
+          <Property Name="Total_Colors" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C1_Color_Break" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C2_Color_Break" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C3_Color_Break" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C4_Color_Break" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C5_Color_Break" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C6_Color_Break" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C7_Color_Break" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C8_Color_Break" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C9_Color_Break" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C10_Color_Break" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C11_Color_Break" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C12_Color_Break" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Art_Design" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Customer_Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Rep" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="RushOrder" Type="Boolean" Nullable="false" />
+          <Property Name="RushOrderPercent" Type="Single" />
+          <Property Name="ShipVia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Shape" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Duplicate" Type="Boolean" Nullable="false" />
+          <Property Name="ReorderExactly" Type="Boolean" Nullable="false" />
+          <Property Name="AsSample" Type="Boolean" Nullable="false" />
+          <Property Name="ReorderChange" Type="Boolean" Nullable="false" />
+          <Property Name="TungLi" Type="Boolean" Nullable="false" />
+          <Property Name="FineThread" Type="Boolean" Nullable="false" />
+          <Property Name="Event" Type="Boolean" Nullable="false" />
+          <Property Name="ShipCompany" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ShipAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ShipCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ShipState" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ShipZip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RushOrd" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblNPI_Emblem_Orders_Backup">
+          <Key>
+            <PropertyRef Name="First_Order_" />
+            <PropertyRef Name="Special_Price_" />
+            <PropertyRef Name="Drop_Ship_" />
+            <PropertyRef Name="Deposit_Required_" />
+            <PropertyRef Name="Deposit_Confirmed_" />
+            <PropertyRef Name="Order_Confirmed_" />
+            <PropertyRef Name="RushOrder" />
+            <PropertyRef Name="Duplicate" />
+            <PropertyRef Name="ReorderExactly" />
+            <PropertyRef Name="AsSample" />
+            <PropertyRef Name="ReorderChange" />
+            <PropertyRef Name="TungLi" />
+            <PropertyRef Name="FineThread" />
+            <PropertyRef Name="Event" />
+            <PropertyRef Name="RushOrd" />
+          </Key>
+          <Property Name="BR_Number" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="Customer_Code" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Order_Date" Type="DateTime" Precision="3" />
+          <Property Name="Request_Date" Type="DateTime" Precision="3" />
+          <Property Name="Cust_Request_Date" Type="DateTime" Precision="3" />
+          <Property Name="TW_Confirm_Date" Type="DateTime" Precision="3" />
+          <Property Name="Ship_Date" Type="DateTime" Precision="3" />
+          <Property Name="PO_Number" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Ordered_By" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="First_Order_" Type="Boolean" Nullable="false" />
+          <Property Name="Reorder_BR__" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Sample" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Length" Type="Single" />
+          <Property Name="Width" Type="Single" />
+          <Property Name="Size" Type="Single" />
+          <Property Name="Size_Info" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="C__of_Emblem" Type="Single" />
+          <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Price_Per_Unit" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Price_List" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Price_List__" Type="Single" />
+          <Property Name="Deposit" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Sample_Charge" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Rush_Order_" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Order_Total" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Special_Price_" Type="Boolean" Nullable="false" />
+          <Property Name="Special_Amount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Drop_Ship_" Type="Boolean" Nullable="false" />
+          <Property Name="Drop_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Drop_Company" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Drop_Address" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Drop_City" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Drop_State" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="Drop_Zip" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Deposit_Required_" Type="Boolean" Nullable="false" />
+          <Property Name="Deposit_Confirmed_" Type="Boolean" Nullable="false" />
+          <Property Name="Order_Confirmed_" Type="Boolean" Nullable="false" />
+          <Property Name="Background" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Background_Type" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Background_Price__" Type="Single" />
+          <Property Name="Border" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Border_Type" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Border_Price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Backing" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Backing_Price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Special_Thread" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Special_Thread_Price__" Type="Single" />
+          <Property Name="Quantity" Type="Double" />
+          <Property Name="Total_Colors" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C1_Color_Break" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C2_Color_Break" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C3_Color_Break" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C4_Color_Break" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C5_Color_Break" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C6_Color_Break" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C7_Color_Break" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C8_Color_Break" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C9_Color_Break" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C10_Color_Break" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C11_Color_Break" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C12_Color_Break" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Art_Design" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Customer_Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Rep" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="RushOrder" Type="Boolean" Nullable="false" />
+          <Property Name="RushOrderPercent" Type="Single" />
+          <Property Name="ShipVia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Shape" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Duplicate" Type="Boolean" Nullable="false" />
+          <Property Name="ReorderExactly" Type="Boolean" Nullable="false" />
+          <Property Name="AsSample" Type="Boolean" Nullable="false" />
+          <Property Name="ReorderChange" Type="Boolean" Nullable="false" />
+          <Property Name="TungLi" Type="Boolean" Nullable="false" />
+          <Property Name="FineThread" Type="Boolean" Nullable="false" />
+          <Property Name="Event" Type="Boolean" Nullable="false" />
+          <Property Name="ShipCompany" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ShipAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ShipCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ShipState" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ShipZip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RushOrd" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="RonPentaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Emblem_Order_Information" EntityType="Self.Emblem_Order_Information" />
+          <EntitySet Name="tblCustomers" EntityType="Self.tblCustomer" />
+          <EntitySet Name="tblNPI_Emblem_Orders" EntityType="Self.tblNPI_Emblem_Order" />
+          <EntitySet Name="tblNPI_Emblem_Orders_Backups" EntityType="Self.tblNPI_Emblem_Orders_Backup" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RonPentaModelStoreContainer" CdmEntityContainer="RonPentaEntities">
+          <EntitySetMapping Name="Emblem_Order_Information">
+            <EntityTypeMapping TypeName="RonPentaModel.Emblem_Order_Information">
+              <MappingFragment StoreEntitySet="Emblem Order Information">
+                <ScalarProperty Name="Customer_ID" ColumnName="Customer ID" />
+                <ScalarProperty Name="Contact_Name" ColumnName="Contact Name" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Fax_other_phone" ColumnName="Fax/other phone" />
+                <ScalarProperty Name="Customer_code" ColumnName="Customer code" />
+                <ScalarProperty Name="Terms_Code" ColumnName="Terms Code" />
+                <ScalarProperty Name="PO_Number" ColumnName="PO Number" />
+                <ScalarProperty Name="Oder_Date" ColumnName="Oder Date" />
+                <ScalarProperty Name="Request_Date" ColumnName="Request Date" />
+                <ScalarProperty Name="Rush_Order_Yes" ColumnName="Rush Order Yes" />
+                <ScalarProperty Name="Rush_Order_No" ColumnName="Rush Order No" />
+                <ScalarProperty Name="Ship_Via_Red" ColumnName="Ship Via Red" />
+                <ScalarProperty Name="Ship_Via_Blue" ColumnName="Ship Via Blue" />
+                <ScalarProperty Name="Ship_Via_Orange" ColumnName="Ship Via Orange" />
+                <ScalarProperty Name="Ship_Via_Ground" ColumnName="Ship Via Ground" />
+                <ScalarProperty Name="Ship_Via_Other" ColumnName="Ship Via Other" />
+                <ScalarProperty Name="Pre_pro_sample_yes" ColumnName="Pre-pro sample yes" />
+                <ScalarProperty Name="pre_pro_sample_no" ColumnName="pre-pro sample no" />
+                <ScalarProperty Name="Pre_pro_sample_other" ColumnName="Pre-pro sample other" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Emblem_Name" ColumnName="Emblem Name" />
+                <ScalarProperty Name="First_Order_Yes" ColumnName="First Order Yes" />
+                <ScalarProperty Name="First_Order_No" ColumnName="First Order No" />
+                <ScalarProperty Name="Reorder_BR_PO" ColumnName="Reorder BR/PO" />
+                <ScalarProperty Name="Date_of_Old_order" ColumnName="Date of Old order" />
+                <ScalarProperty Name="Length" ColumnName="Length" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="Actual_size" ColumnName="Actual size" />
+                <ScalarProperty Name="Shape_circle" ColumnName="Shape circle" />
+                <ScalarProperty Name="Shape_square" ColumnName="Shape square" />
+                <ScalarProperty Name="Shape_rect" ColumnName="Shape rect" />
+                <ScalarProperty Name="Shape_Other" ColumnName="Shape Other" />
+                <ScalarProperty Name="Percent_of_emblem" ColumnName="Percent of emblem" />
+                <ScalarProperty Name="Price_Each" ColumnName="Price Each" />
+                <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+                <ScalarProperty Name="Border" ColumnName="Border" />
+                <ScalarProperty Name="merrow" ColumnName="merrow" />
+                <ScalarProperty Name="hand_cut" ColumnName="hand cut" />
+                <ScalarProperty Name="other" ColumnName="other" />
+                <ScalarProperty Name="border_other_text" ColumnName="border other text" />
+                <ScalarProperty Name="backing_plain" ColumnName="backing plain" />
+                <ScalarProperty Name="backing_heatseal" ColumnName="backing heatseal" />
+                <ScalarProperty Name="backing_plastic" ColumnName="backing plastic" />
+                <ScalarProperty Name="backing_other" ColumnName="backing other" />
+                <ScalarProperty Name="backing_other_text" ColumnName="backing other text" />
+                <ScalarProperty Name="special_thread_neon" ColumnName="special thread neon" />
+                <ScalarProperty Name="special_thread_metallic" ColumnName="special thread metallic" />
+                <ScalarProperty Name="special_thread_other" ColumnName="special thread other" />
+                <ScalarProperty Name="total_colors" ColumnName="total colors" />
+                <ScalarProperty Name="color1" ColumnName="color1" />
+                <ScalarProperty Name="color2" ColumnName="color2" />
+                <ScalarProperty Name="color3" ColumnName="color3" />
+                <ScalarProperty Name="color4" ColumnName="color4" />
+                <ScalarProperty Name="color5" ColumnName="color5" />
+                <ScalarProperty Name="color6" ColumnName="color6" />
+                <ScalarProperty Name="color7" ColumnName="color7" />
+                <ScalarProperty Name="color8" ColumnName="color8" />
+                <ScalarProperty Name="color9" ColumnName="color9" />
+                <ScalarProperty Name="color10" ColumnName="color10" />
+                <ScalarProperty Name="color11" ColumnName="color11" />
+                <ScalarProperty Name="color12" ColumnName="color12" />
+                <ScalarProperty Name="special_instructions" ColumnName="special instructions" />
+                <ScalarProperty Name="Ship_via_other_text" ColumnName="Ship via other text" />
+                <ScalarProperty Name="Background" ColumnName="Background" />
+                <ScalarProperty Name="Duplicate_Sample" ColumnName="Duplicate Sample" />
+                <ScalarProperty Name="As_Sample" ColumnName="As Sample" />
+                <ScalarProperty Name="Reorder_Exactly" ColumnName="Reorder Exactly" />
+                <ScalarProperty Name="Reorder_Change" ColumnName="Reorder Change" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblCustomers">
+            <EntityTypeMapping TypeName="RonPentaModel.tblCustomer">
+              <MappingFragment StoreEntitySet="tblCustomers">
+                <ScalarProperty Name="Customer_ID" ColumnName="Customer ID" />
+                <ScalarProperty Name="Customer_Code" ColumnName="Customer Code" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="Contact_Name" ColumnName="Contact Name" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Fax_Other_Phone" ColumnName="Fax/Other Phone" />
+                <ScalarProperty Name="Use_Drop_Ship_Address_" ColumnName="Use Drop Ship Address?" />
+                <ScalarProperty Name="Drop_Ship_Company" ColumnName="Drop Ship Company" />
+                <ScalarProperty Name="Drop_Ship_Address" ColumnName="Drop Ship Address" />
+                <ScalarProperty Name="Drop_Ship_City" ColumnName="Drop Ship City" />
+                <ScalarProperty Name="Drop_Ship_State" ColumnName="Drop Ship State" />
+                <ScalarProperty Name="Drop_Ship_Zip" ColumnName="Drop Ship Zip" />
+                <ScalarProperty Name="Auto_Confirmation_" ColumnName="Auto Confirmation?" />
+                <ScalarProperty Name="Deposit_Required_" ColumnName="Deposit Required?" />
+                <ScalarProperty Name="Deposit_Confirmation_" ColumnName="Deposit Confirmation?" />
+                <ScalarProperty Name="Terms_Code" ColumnName="Terms Code" />
+                <ScalarProperty Name="Ship_Via" ColumnName="Ship Via" />
+                <ScalarProperty Name="Pricing_Page" ColumnName="Pricing Page" />
+                <ScalarProperty Name="Pricing_Percent" ColumnName="Pricing Percent" />
+                <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="CustomerInfoSent" ColumnName="CustomerInfoSent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblNPI_Emblem_Orders">
+            <EntityTypeMapping TypeName="RonPentaModel.tblNPI_Emblem_Order">
+              <MappingFragment StoreEntitySet="tblNPI Emblem Orders">
+                <ScalarProperty Name="BR_Number" ColumnName="BR Number" />
+                <ScalarProperty Name="Customer_Code" ColumnName="Customer Code" />
+                <ScalarProperty Name="Order_Date" ColumnName="Order Date" />
+                <ScalarProperty Name="Request_Date" ColumnName="Request Date" />
+                <ScalarProperty Name="Cust_Request_Date" ColumnName="Cust Request Date" />
+                <ScalarProperty Name="TW_Confirm_Date" ColumnName="TW Confirm Date" />
+                <ScalarProperty Name="Ship_Date" ColumnName="Ship Date" />
+                <ScalarProperty Name="PO_Number" ColumnName="PO Number" />
+                <ScalarProperty Name="Ordered_By" ColumnName="Ordered By" />
+                <ScalarProperty Name="First_Order_" ColumnName="First Order?" />
+                <ScalarProperty Name="Reorder_BR__" ColumnName="Reorder BR #" />
+                <ScalarProperty Name="Sample" ColumnName="Sample" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Length" ColumnName="Length" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="Size" ColumnName="Size" />
+                <ScalarProperty Name="Size_Info" ColumnName="Size Info" />
+                <ScalarProperty Name="C__of_Emblem" ColumnName="% of Emblem" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Price_Per_Unit" ColumnName="Price Per Unit" />
+                <ScalarProperty Name="Price_List" ColumnName="Price List" />
+                <ScalarProperty Name="Price_List__" ColumnName="Price List %" />
+                <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+                <ScalarProperty Name="Sample_Charge" ColumnName="Sample Charge" />
+                <ScalarProperty Name="Rush_Order_" ColumnName="Rush Order?" />
+                <ScalarProperty Name="Order_Total" ColumnName="Order Total" />
+                <ScalarProperty Name="Special_Price_" ColumnName="Special Price?" />
+                <ScalarProperty Name="Special_Amount" ColumnName="Special Amount" />
+                <ScalarProperty Name="Drop_Ship_" ColumnName="Drop Ship?" />
+                <ScalarProperty Name="Drop_Name" ColumnName="Drop Name" />
+                <ScalarProperty Name="Drop_Company" ColumnName="Drop Company" />
+                <ScalarProperty Name="Drop_Address" ColumnName="Drop Address" />
+                <ScalarProperty Name="Drop_City" ColumnName="Drop City" />
+                <ScalarProperty Name="Drop_State" ColumnName="Drop State" />
+                <ScalarProperty Name="Drop_Zip" ColumnName="Drop Zip" />
+                <ScalarProperty Name="Deposit_Required_" ColumnName="Deposit Required?" />
+                <ScalarProperty Name="Deposit_Confirmed_" ColumnName="Deposit Confirmed?" />
+                <ScalarProperty Name="Order_Confirmed_" ColumnName="Order Confirmed?" />
+                <ScalarProperty Name="Background" ColumnName="Background" />
+                <ScalarProperty Name="Background_Type" ColumnName="Background Type" />
+                <ScalarProperty Name="Background_Price__" ColumnName="Background Price %" />
+                <ScalarProperty Name="Border" ColumnName="Border" />
+                <ScalarProperty Name="Border_Type" ColumnName="Border Type" />
+                <ScalarProperty Name="Border_Price" ColumnName="Border Price" />
+                <ScalarProperty Name="Backing" ColumnName="Backing" />
+                <ScalarProperty Name="Backing_Price" ColumnName="Backing Price" />
+                <ScalarProperty Name="Special_Thread" ColumnName="Special Thread" />
+                <ScalarProperty Name="Special_Thread_Price__" ColumnName="Special Thread Price %" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Total_Colors" ColumnName="Total Colors" />
+                <ScalarProperty Name="C1_Color_Break" ColumnName="1 Color Break" />
+                <ScalarProperty Name="C2_Color_Break" ColumnName="2 Color Break" />
+                <ScalarProperty Name="C3_Color_Break" ColumnName="3 Color Break" />
+                <ScalarProperty Name="C4_Color_Break" ColumnName="4 Color Break" />
+                <ScalarProperty Name="C5_Color_Break" ColumnName="5 Color Break" />
+                <ScalarProperty Name="C6_Color_Break" ColumnName="6 Color Break" />
+                <ScalarProperty Name="C7_Color_Break" ColumnName="7 Color Break" />
+                <ScalarProperty Name="C8_Color_Break" ColumnName="8 Color Break" />
+                <ScalarProperty Name="C9_Color_Break" ColumnName="9 Color Break" />
+                <ScalarProperty Name="C10_Color_Break" ColumnName="10 Color Break" />
+                <ScalarProperty Name="C11_Color_Break" ColumnName="11 Color Break" />
+                <ScalarProperty Name="C12_Color_Break" ColumnName="12 Color Break" />
+                <ScalarProperty Name="Art_Design" ColumnName="Art Design" />
+                <ScalarProperty Name="Customer_Notes" ColumnName="Customer Notes" />
+                <ScalarProperty Name="Rep" ColumnName="Rep" />
+                <ScalarProperty Name="RushOrder" ColumnName="RushOrder" />
+                <ScalarProperty Name="RushOrderPercent" ColumnName="RushOrderPercent" />
+                <ScalarProperty Name="ShipVia" ColumnName="ShipVia" />
+                <ScalarProperty Name="Shape" ColumnName="Shape" />
+                <ScalarProperty Name="Duplicate" ColumnName="Duplicate" />
+                <ScalarProperty Name="ReorderExactly" ColumnName="ReorderExactly" />
+                <ScalarProperty Name="AsSample" ColumnName="AsSample" />
+                <ScalarProperty Name="ReorderChange" ColumnName="ReorderChange" />
+                <ScalarProperty Name="TungLi" ColumnName="TungLi" />
+                <ScalarProperty Name="FineThread" ColumnName="FineThread" />
+                <ScalarProperty Name="Event" ColumnName="Event" />
+                <ScalarProperty Name="ShipCompany" ColumnName="ShipCompany" />
+                <ScalarProperty Name="ShipAddress" ColumnName="ShipAddress" />
+                <ScalarProperty Name="ShipCity" ColumnName="ShipCity" />
+                <ScalarProperty Name="ShipState" ColumnName="ShipState" />
+                <ScalarProperty Name="ShipZip" ColumnName="ShipZip" />
+                <ScalarProperty Name="RushOrd" ColumnName="RushOrd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblNPI_Emblem_Orders_Backups">
+            <EntityTypeMapping TypeName="RonPentaModel.tblNPI_Emblem_Orders_Backup">
+              <MappingFragment StoreEntitySet="tblNPI Emblem Orders Backup">
+                <ScalarProperty Name="BR_Number" ColumnName="BR Number" />
+                <ScalarProperty Name="Customer_Code" ColumnName="Customer Code" />
+                <ScalarProperty Name="Order_Date" ColumnName="Order Date" />
+                <ScalarProperty Name="Request_Date" ColumnName="Request Date" />
+                <ScalarProperty Name="Cust_Request_Date" ColumnName="Cust Request Date" />
+                <ScalarProperty Name="TW_Confirm_Date" ColumnName="TW Confirm Date" />
+                <ScalarProperty Name="Ship_Date" ColumnName="Ship Date" />
+                <ScalarProperty Name="PO_Number" ColumnName="PO Number" />
+                <ScalarProperty Name="Ordered_By" ColumnName="Ordered By" />
+                <ScalarProperty Name="First_Order_" ColumnName="First Order?" />
+                <ScalarProperty Name="Reorder_BR__" ColumnName="Reorder BR #" />
+                <ScalarProperty Name="Sample" ColumnName="Sample" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Length" ColumnName="Length" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="Size" ColumnName="Size" />
+                <ScalarProperty Name="Size_Info" ColumnName="Size Info" />
+                <ScalarProperty Name="C__of_Emblem" ColumnName="% of Emblem" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Price_Per_Unit" ColumnName="Price Per Unit" />
+                <ScalarProperty Name="Price_List" ColumnName="Price List" />
+                <ScalarProperty Name="Price_List__" ColumnName="Price List %" />
+                <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+                <ScalarProperty Name="Sample_Charge" ColumnName="Sample Charge" />
+                <ScalarProperty Name="Rush_Order_" ColumnName="Rush Order?" />
+                <ScalarProperty Name="Order_Total" ColumnName="Order Total" />
+                <ScalarProperty Name="Special_Price_" ColumnName="Special Price?" />
+                <ScalarProperty Name="Special_Amount" ColumnName="Special Amount" />
+                <ScalarProperty Name="Drop_Ship_" ColumnName="Drop Ship?" />
+                <ScalarProperty Name="Drop_Name" ColumnName="Drop Name" />
+                <ScalarProperty Name="Drop_Company" ColumnName="Drop Company" />
+                <ScalarProperty Name="Drop_Address" ColumnName="Drop Address" />
+                <ScalarProperty Name="Drop_City" ColumnName="Drop City" />
+                <ScalarProperty Name="Drop_State" ColumnName="Drop State" />
+                <ScalarProperty Name="Drop_Zip" ColumnName="Drop Zip" />
+                <ScalarProperty Name="Deposit_Required_" ColumnName="Deposit Required?" />
+                <ScalarProperty Name="Deposit_Confirmed_" ColumnName="Deposit Confirmed?" />
+                <ScalarProperty Name="Order_Confirmed_" ColumnName="Order Confirmed?" />
+                <ScalarProperty Name="Background" ColumnName="Background" />
+                <ScalarProperty Name="Background_Type" ColumnName="Background Type" />
+                <ScalarProperty Name="Background_Price__" ColumnName="Background Price %" />
+                <ScalarProperty Name="Border" ColumnName="Border" />
+                <ScalarProperty Name="Border_Type" ColumnName="Border Type" />
+                <ScalarProperty Name="Border_Price" ColumnName="Border Price" />
+                <ScalarProperty Name="Backing" ColumnName="Backing" />
+                <ScalarProperty Name="Backing_Price" ColumnName="Backing Price" />
+                <ScalarProperty Name="Special_Thread" ColumnName="Special Thread" />
+                <ScalarProperty Name="Special_Thread_Price__" ColumnName="Special Thread Price %" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Total_Colors" ColumnName="Total Colors" />
+                <ScalarProperty Name="C1_Color_Break" ColumnName="1 Color Break" />
+                <ScalarProperty Name="C2_Color_Break" ColumnName="2 Color Break" />
+                <ScalarProperty Name="C3_Color_Break" ColumnName="3 Color Break" />
+                <ScalarProperty Name="C4_Color_Break" ColumnName="4 Color Break" />
+                <ScalarProperty Name="C5_Color_Break" ColumnName="5 Color Break" />
+                <ScalarProperty Name="C6_Color_Break" ColumnName="6 Color Break" />
+                <ScalarProperty Name="C7_Color_Break" ColumnName="7 Color Break" />
+                <ScalarProperty Name="C8_Color_Break" ColumnName="8 Color Break" />
+                <ScalarProperty Name="C9_Color_Break" ColumnName="9 Color Break" />
+                <ScalarProperty Name="C10_Color_Break" ColumnName="10 Color Break" />
+                <ScalarProperty Name="C11_Color_Break" ColumnName="11 Color Break" />
+                <ScalarProperty Name="C12_Color_Break" ColumnName="12 Color Break" />
+                <ScalarProperty Name="Art_Design" ColumnName="Art Design" />
+                <ScalarProperty Name="Customer_Notes" ColumnName="Customer Notes" />
+                <ScalarProperty Name="Rep" ColumnName="Rep" />
+                <ScalarProperty Name="RushOrder" ColumnName="RushOrder" />
+                <ScalarProperty Name="RushOrderPercent" ColumnName="RushOrderPercent" />
+                <ScalarProperty Name="ShipVia" ColumnName="ShipVia" />
+                <ScalarProperty Name="Shape" ColumnName="Shape" />
+                <ScalarProperty Name="Duplicate" ColumnName="Duplicate" />
+                <ScalarProperty Name="ReorderExactly" ColumnName="ReorderExactly" />
+                <ScalarProperty Name="AsSample" ColumnName="AsSample" />
+                <ScalarProperty Name="ReorderChange" ColumnName="ReorderChange" />
+                <ScalarProperty Name="TungLi" ColumnName="TungLi" />
+                <ScalarProperty Name="FineThread" ColumnName="FineThread" />
+                <ScalarProperty Name="Event" ColumnName="Event" />
+                <ScalarProperty Name="ShipCompany" ColumnName="ShipCompany" />
+                <ScalarProperty Name="ShipAddress" ColumnName="ShipAddress" />
+                <ScalarProperty Name="ShipCity" ColumnName="ShipCity" />
+                <ScalarProperty Name="ShipState" ColumnName="ShipState" />
+                <ScalarProperty Name="ShipZip" ColumnName="ShipZip" />
+                <ScalarProperty Name="RushOrd" ColumnName="RushOrd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

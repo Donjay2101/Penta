@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premier</title>
+    <link rel="icon" href="~/Images/logo-new.png" type="image/png" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/Gridmvc.css" rel="stylesheet" />
+    @*<script src="~/Scripts/jquery.js"></script>*@
+    <script src="~/Scripts/gridmvc.min.js"></script>
+    @*<script src="~/Scripts/jquery-ui.min.js"></script>*@
+    <script src="~/Scripts/common.js"></script>
+    @*<link href="~/Content/jquery-ui.min.css" rel="stylesheet" />*@
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="~/Scripts/AssignCustomerCode.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            //debugger;
+            $(".date").each(function () {
+                //debugger;
+                //  var j= $.noConflict();
+                $(this).datepicker();
+            });
+
+        });
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            var url = document.URL,
+            shortUrl = url.substring(0, url.lastIndexOf("/"));
+            var link = shortUrl.split('/');
+            if (link.length == 3) {
+                $('.nav li a').eq(0).addClass('active-link');
+            }
+            else {
+                $(".nav li a").each(function () {
+
+                    var name = $(this).attr("name");
+                    if (shortUrl.indexOf(name) > 0) {
+                        $(this).addClass("active-link");
+                    }
+                });
+            }
+
+        });
+        $('#myTabs a').click(function (e) {
+            e.preventDefault()
+            $(this).tab('show')
+        })
+    </script>
+    <script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+    </script>
+
+</head>
+<body>
+    <div id="overLay" class="overlay" style="display:none">
+        <div id="overlayContainer">
+
+        </div>
+    </div>
+    <div id="overLay" class="overlay" style="display:none">
+        <div class="loadingimg">
+            <img src="~/images/load.gif" />
+        </div>
+    </div>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="~/images/logo-new.PNG"  id="logo" />
+                @*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    @*<li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("User", "Index", "User")</li>*@
+                    <li><a href="/Orders/index" name="Orders">Orders</a></li>
+                    <li><a href="/PriceLists/index" name="PriceLists">PriceLists</a></li>
+                    <li><a href="/User/index" name="User">User</a></li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year</p>
+        </footer>
+    </div>
+
+
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/Common")
+    <script src="~/Scripts/OrderCalculation.js"></script>
+    <script src="~/Scripts/Accounting.min.js"></script>
+    <script src="~/Scripts/PriceListJS.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+

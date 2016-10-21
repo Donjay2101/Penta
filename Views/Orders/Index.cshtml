@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<a href="/Orders/Create" data-toggle="tooltip" data-placement="right" title="Create new"><img src="~/images/add.png" class="create" /></a>
+<div id="dataContainer">
+    @Html.Action("Orders")
+</div>
+

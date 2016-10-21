@@ -1,0 +1,519 @@
+﻿@model IEnumerable<DAH.Models.NPIEmblemOrder>
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BRNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustRequestDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TWConfirmDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShipDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PONumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrder)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReorderBRNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sample)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Length)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Width)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Size)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SizeInfo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PercentofEmblem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PricePerUnit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PriceList)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PriceListPercent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Deposit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SampleCharge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RushOrder)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderTotal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpecialPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpecialAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DropShip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DropName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DropCompany)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DropAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DropCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DropState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DropZip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DepositRequired)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DepositConfirmed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderConfirmed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Background)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BackgroundType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BackgroundPricePercent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Border)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BorderType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BorderPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Backing)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BackingPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpecialThread)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpecialThreadPricePercent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalColors)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C1ColorBreak)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C2ColorBreak)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C3ColorBreak)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C4ColorBreak)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C5ColorBreak)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C6ColorBreak)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C7ColorBreak)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C8ColorBreak)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C9ColorBreak)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C10ColorBreak)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C11ColorBreak)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C12ColorBreak)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArtDesign)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerNotes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rep)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ISRushOrder)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RushOrderPercent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShipVia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Shape)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Duplicate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReorderExactly)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AsSample)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReorderChange)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TungLi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FineThread)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Event)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShipCompany)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShipAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShipCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShipState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShipZip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RushOrd)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BRNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustRequestDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TWConfirmDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShipDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PONumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstOrder)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReorderBRNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sample)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Length)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Width)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Size)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SizeInfo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PercentofEmblem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PricePerUnit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PriceList)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PriceListPercent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Deposit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SampleCharge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RushOrder)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderTotal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpecialPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpecialAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DropShip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DropName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DropCompany)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DropAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DropCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DropState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DropZip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DepositRequired)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DepositConfirmed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderConfirmed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Background)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BackgroundType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BackgroundPricePercent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Border)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BorderType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BorderPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Backing)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BackingPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpecialThread)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpecialThreadPricePercent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalColors)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C1ColorBreak)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C2ColorBreak)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C3ColorBreak)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C4ColorBreak)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C5ColorBreak)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C6ColorBreak)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C7ColorBreak)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C8ColorBreak)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C9ColorBreak)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C10ColorBreak)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C11ColorBreak)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C12ColorBreak)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArtDesign)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerNotes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rep)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ISRushOrder)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RushOrderPercent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShipVia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Shape)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Duplicate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReorderExactly)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AsSample)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReorderChange)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TungLi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FineThread)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Event)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShipCompany)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShipAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShipCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShipState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShipZip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RushOrd)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
