@@ -23,7 +23,10 @@ namespace DAH.DAL.PriceLists
          //All Users
          public IEnumerable<PriceListViewModel> GetPriceLists(int ID)
          {
-             return context.Database.SqlQuery<PriceListViewModel>("exec SP_GetPriceLists @id",new SqlParameter("@id",ID)).AsEnumerable();
+            
+                return context.Database.SqlQuery<PriceListViewModel>("exec SP_GetPriceLists @id", new SqlParameter("@id", ID)).AsEnumerable();
+            
+             
          }
 
 

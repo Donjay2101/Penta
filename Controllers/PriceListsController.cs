@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using DAH.DAL.PriceLists;
 using DAH.Models;
 using Newtonsoft.Json;
+using DAH.ViewModel;
 
 namespace DAH.Controllers
 {
@@ -34,9 +35,16 @@ namespace DAH.Controllers
             
             if(Session["User"]!=null)
             {
+                List<PriceListViewModel> data = new List<PriceListViewModel>();
                 User user = Session["User"] as User;
-                var data = context.GetPriceLists(user.ID).ToList();
-
+                if(ShrdMaster.Instance.ISAdmin(user.UserName))
+                {
+                   data= context.GetPriceLists().ToList();
+                }
+                else
+                {
+                    data=context.GetPriceLists(user.ID).ToList();
+                }                
                 return PartialView("_PriceLists", data);
             }
 

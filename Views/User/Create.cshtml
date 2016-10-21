@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Create";
+    Layout = ViewBag.Layout;
 }
 
 
@@ -16,7 +17,10 @@
                 <h4 class="header">User</h4>
             </div>
             <div class="col-md-4">
-                <input type="submit" value="Create" class="mybtn pull-right" /><input type="button" value="Back" class="mybtn pull-right" onclick="window.location.href='/Users/Index'" />
+                <input type="submit" value="Create" class="mybtn pull-right" />
+                <input type="button" value="Back" class="mybtn pull-right" onclick="window.location.href='@ViewBag.Back'" />
+                
+                
             </div>
         </div>  
         <hr />

@@ -10,6 +10,7 @@ using DAH.Models;
 using DAH.ViewModel;
 using Newtonsoft.Json;
 
+
 namespace DAH.Controllers
 {
     [Authorize(Roles="Admin")]
@@ -84,12 +85,37 @@ namespace DAH.Controllers
         [AllowAnonymous]
         public ActionResult Create()
         {
+            if (Session["User"] == null)
+            {
+                ViewBag.Back = "/Account/Login";
+                ViewBag.Layout= @"~/Views/Shared/_LoginLayout.cshtml";
+            }
+            else
+            {
+                ViewBag.Layout= @"~/Views/Shared/_Layout.cshtml";
+                ViewBag.Back= "/Users/Index";
+            }
+            
+            
+                
+
 
             return View();
         }
 
         public ActionResult GetPendingUsers()
         {
+            if (Session["User"] == null)
+            {
+                ViewBag.Back = "/Account/Login";
+                ViewBag.Layout = @"~/Views/Shared/_LoginLayout.cshtml";
+            }
+            else
+            {
+                ViewBag.Layout = @"~/Views/Shared/_Layout.cshtml";
+                ViewBag.Back = "/Users/Index";
+            }
+
             var data=userRepository.PendingUsers();
 
          

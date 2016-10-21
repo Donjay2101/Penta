@@ -22,7 +22,10 @@ $(document).on('click', '#activeUsers', function () {
 
 //common function to load customers------------------
 function LoadUsers(option) {
-    $('#dataContainer').load('/User/User?option=' + option);
+    $('#overLay1').css('display', 'block');
+    $('#dataContainer').load('/User/User?option=' + option, function () {
+        $('#overLay1').css('display', 'none');
+    });
 }
 
 //open Popup to assgin customer Code and Vendor MFG----------------------------------
